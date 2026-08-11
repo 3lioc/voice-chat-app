@@ -23,12 +23,8 @@ jobs:
       - name: Prepare Flutter project
         run: |
           mkdir -p lib
-
-          if [ -f main.dart ] && [ ! -f lib/main.dart ]; then
-            mv main.dart lib/main.dart
-          fi
-
-          flutter create . --platforms=android --org=com.rivo.app
+          cp main.dart lib/main.dart
+          flutter create --platforms=android .
 
       - name: Install dependencies
         run: flutter pub get
