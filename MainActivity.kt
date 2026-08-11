@@ -1,3 +1,0 @@
-package com.rivo.app
-import io.flutter.embedding.android.FlutterActivity
-class MainActivity: FlutterActivity()
